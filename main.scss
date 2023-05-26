@@ -36,3 +36,178 @@
         padding: 20px;
     }
  }
+
+
+
+
+ .parent {
+    font-weight: bold;
+    .child{
+        font-size: 20px;
+        .sidebar{
+            color:aqua
+        }
+    }
+ }
+
+.parent-one , .parent-two{
+    padding: 20px;
+    .child{
+        padding: 10px;
+    }
+}
+
+
+.parent  >  {
+.child {
+    font-size: 20PX;
+}
+.test {
+    font-size: 20PX;
+}
+}
+
+.parent     {
+    > .child {
+        font-size: 20PX;
+    }
+    .test {
+        font-size: 20PX;
+    }
+
+     + p {
+        font-size: 15px;
+     }
+    }
+
+.parent {
+    > {
+        .element-one {
+            font-size: 10px;
+        }
+        .element-two {
+            font-size: 20px;
+        }
+    }
+
+    .not-direct-child{
+        font-size: bold;
+    }
+}
+
+
+.box {
+    &.red{
+        font-size: bold;
+    }
+    &.green{
+        font-size: bold;
+    }
+
+    .title{
+        font-size: bold;
+    }
+
+    .description{
+        font-size: bold;
+    }
+
+    &:hover{
+        background-color: aqua;
+    }
+    &:hover .title{
+        font-weight: 200;
+    }
+    :not(&){
+        font-weight: normal;
+    }
+    [dir=rtl] & {
+        direction:  rtl;
+    }
+}
+
+
+.box {
+    font-size: 20px;
+    font:{
+        size: 15px;
+        weight:bold;
+    }
+    margin: auto{
+        top:10px;
+        bottom:15px
+    };
+}
+
+
+%main-box{
+    background-color: white;
+    padding: 15px;
+    border: 1px solid #ccc;
+}
+
+.ads{
+    @extend %main-box;
+    font-size:20px
+}
+
+$theme : 'dark';
+
+.page{
+    @if $theme == 'light' {
+        background-color: white;
+        color:#444
+    } @else {
+        background-color:  #444;
+        color: white;
+    }
+}
+
+$rounded : false ;
+
+.boxs{
+    @extend %main-box;
+    border-radius: if($rounded,6px,null);
+}
+$direction: 'left';
+
+.arrow-div{
+    @extend %main-box;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    margin:  50px auto;
+    &::before{
+        content: '';
+        position: absolute;
+        border: 20px solid transparent;
+        @if $direction == "top"{
+            top:-40px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-bottom-color: red;
+        }@else if $direction == 'right' {
+            right: -40px;
+            top : 50%;
+            transform: translateY(-50%);
+            border-left-color: red;
+        }@else if $direction == 'bottom' {
+            bottom: -40px;
+            left : 50%;
+            transform: translateX(-50%);
+            border-top-color: red;
+        }@else if $direction == 'left' {
+            left: -40px;
+            top : 50%;
+            transform: translateY(-50%);
+            border-right-color: red;
+        }
+
+
+
+    }
+}
