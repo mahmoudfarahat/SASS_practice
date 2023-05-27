@@ -170,4 +170,322 @@
           transform: translateY(-50%);
   border-right-color: red;
 }
+
+.ad-elzero-u407e89cf {
+  font-size: 20px;
+  background-image: url("imgs/elzero.png");
+  left: 0;
+}
+
+.ad-u28e3eb74 {
+  font-weight: bold;
+}
+
+/* sass and css but not compressed mode*/
+/*! all three */
+ul.links {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.circle-100 {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  color: white;
+}
+
+.circle-200 {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  color: white;
+}
+
+.center-circle {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.class-1 {
+  font-size: 10;
+}
+
+.class-2 {
+  font-size: 20;
+}
+
+.class-3 {
+  font-size: 30;
+}
+
+.class-4 {
+  font-size: 40;
+}
+
+.class-5 {
+  font-size: 50;
+}
+
+.class-6 {
+  font-size: 60;
+}
+
+.class-7 {
+  font-size: 70;
+}
+
+.class-8 {
+  font-size: 80;
+}
+
+.class-9 {
+  font-size: 90;
+}
+
+.class-10 {
+  font-size: 100;
+}
+
+.circle-100 {
+  width: 100px;
+}
+
+.circle-200 {
+  width: 200px;
+}
+
+.circle-300 {
+  width: 300px;
+}
+
+.circle-400 {
+  width: 400px;
+}
+
+.circle-500 {
+  width: 500px;
+}
+
+.circle-600 {
+  width: 600px;
+}
+
+.circle-700 {
+  width: 700px;
+}
+
+.circle-800 {
+  width: 800px;
+}
+
+.circle-900 {
+  width: 900px;
+}
+
+.circle-1000 {
+  width: 1000px;
+}
+
+.red-theme .products {
+  background-color: white;
+  border-bottom: 2px solid red;
+}
+
+.green-theme .products {
+  background-color: white;
+  border-bottom: 2px solid green;
+}
+
+.blue-theme .products {
+  background-color: white;
+  border-bottom: 2px solid blue;
+}
+
+.facebook {
+  background-color: "blue";
+}
+
+.facebook::before {
+  content: "facebook";
+}
+
+.youtube {
+  background-color: "red";
+}
+
+.youtube::before {
+  content: "youtube";
+}
+
+.github {
+  background-color: "black";
+}
+
+.github::before {
+  content: "github";
+}
+
+.one {
+  font-size: 20px;
+  background-color: red;
+}
+
+.two {
+  font-size: 15px;
+  background-color: green;
+}
+
+.three {
+  font-size: 22px;
+  background-color: blue;
+}
+
+.width-100 {
+  width: 100px;
+  height: 50px;
+}
+
+.width-200 {
+  width: 200px;
+  height: 100px;
+}
+
+.width-300 {
+  width: 300px;
+  height: 150px;
+}
+
+.width-400 {
+  width: 400px;
+  height: 200px;
+}
+
+.width-500 {
+  width: 500px;
+  height: 250px;
+}
+
+.width-600 {
+  width: 600px;
+  height: 300px;
+}
+
+.width-700 {
+  width: 700px;
+  height: 350px;
+}
+
+.width-800 {
+  width: 800px;
+  height: 400px;
+}
+
+.width-900 {
+  width: 900px;
+  height: 450px;
+}
+
+.width-1000 {
+  width: 1000px;
+  height: 500px;
+}
+
+.col-1 {
+  width: 8.33333%;
+}
+
+.col-2 {
+  width: 16.66667%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33333%;
+}
+
+.col-5 {
+  width: 41.66667%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-7 {
+  width: 58.33333%;
+}
+
+.col-8 {
+  width: 66.66667%;
+}
+
+.col-9 {
+  width: 75%;
+}
+
+.col-10 {
+  width: 83.33333%;
+}
+
+.col-11 {
+  width: 91.66667%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.element {
+  width: 200px;
+  height: 100px;
+  top: 350px;
+}
+
+.black-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 767px) {
+  .media {
+    font-size: 15px;
+  }
+}
 /*# sourceMappingURL=main.css.map */

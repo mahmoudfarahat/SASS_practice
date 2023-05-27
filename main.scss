@@ -6,6 +6,12 @@
 
  @import './sass/variables/colors'  ;
 
+
+ @import './sass/helpers/functions'  ;
+
+ @import './sass/helpers/mixins'  ;
+
+
  $alt_color : green;
 
  .header {
@@ -205,9 +211,163 @@ $direction: 'left';
             top : 50%;
             transform: translateY(-50%);
             border-right-color: red;
+        }@else{
+            @error "This Direction #{$direction} Is Not Valid"
         }
+    }
 
 
 
+}
+$company: "elzero";
+$position : "left";
+.ad-#{$company}-#{unique-id()}{
+    font-size: 20px;
+    background-image: url("imgs/#{$company}.png");
+    #{ $position } :0
+}
+
+.ad-#{unique-id()}{
+    font-weight: bold;
+}
+
+
+// in sass only
+
+/* sass and css but not compressed mode*/
+
+/*! all three */
+
+
+@mixin list-reset {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+ul.links{
+    @include list-reset;
+}
+
+@mixin circle($dimensions){
+    border-radius: 50%;
+    width:$dimensions ;
+    height:$dimensions ;
+}
+.circle-100{
+    @include circle(100px);
+    color :white
+}
+
+.circle-200{
+    @include circle(200px);
+    color :white
+}
+
+
+@mixin centering {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-circle {
+    @include circle(200px);
+    @include centering;
+
+}
+
+@for $i from 1 through 10 {
+    .class-#{$i}{
+        font-size: $i*10;
+    }
+}
+
+$dimensions:0;
+
+@for $i from 1 through 10 {
+    .circle-#{100 +$dimensions}{
+            width: $dimensions + 100px ;
+    }
+    $dimensions : $dimensions +100
+}
+
+$themes: red, green , blue;
+
+@each $theme in $themes{
+    .#{$theme}-theme{
+        .products{
+            background-color: white;
+            border-bottom: 2px solid $theme;
+        }
+    }
+}
+
+$socials :('facebook':'blue','youtube':'red','github':'black');
+
+@each $name , $color in $socials {
+    .#{$name}{
+        background-color: $color;
+        &::before{
+            content: $name;
+        }
+    }
+}
+
+
+$classes: 'one' 20px red,"two" 15px green , "three" 22px blue;
+
+@each $class , $font , $color in $classes {
+
+    .#{$class}{
+        font-size: $font;
+        background-color: $color;
+    }
+
+}
+
+$start : 1;
+
+@while $start <=10 { 
+    .width-#{$start*100} { 
+            width : $start*100px;
+            height:($start *100px)/2
+    }
+    $start : $start +1;
+}
+
+
+$grid_cols:12;
+
+@for $i from 1 through $grid_cols {
+    .col-#{$i}{
+        width: percentage($i/$grid_cols);
+    }
+}
+
+$width:200px;
+.element {
+    width: $width;
+    height: half($width);
+    top:calculate(100px,200px,50px)
+}
+
+.black-overlay{
+    @include overlay(black,.5)
+}
+
+@include KeyF(fade-in){
+    from{
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+.media{
+    @include breakpoints(mobile){
+        font-size: 15px;
     }
 }
